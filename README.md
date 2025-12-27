@@ -43,3 +43,54 @@ Repository ini berisi dokumentasi hasil **Praktikum Network Security** yang memb
    - Ping of Death (PoD) Spoofing
    - SYN Flood
    - LAND Attack
+
+     ---
+
+## Tools yang Digunakan
+
+- Wireshark
+- EtherApe
+- Hunt
+- Netcat
+- Telnet
+- SSH
+- Nmap
+
+---
+
+## Topologi Jaringan
+
+Topologi jaringan terdiri dari:
+
+- **Client**: sebagai korban komunikasi
+- **Server**: penyedia layanan
+- **Attacker**: melakukan spoofing dan hijacking
+- **Switch**: penghubung seluruh perangkat dalam satu jaringan
+
+Attacker berada dalam jaringan yang sama untuk memungkinkan terjadinya Man in the Middle (MITM) pada ARP spoofing.
+
+---
+
+## Hasil dan Analisis Singkat
+
+- ARP Spoofing berhasil memanipulasi tabel ARP sehingga attacker dapat menyadap komunikasi.
+- Session hijacking berhasil dilakukan pada Telnet karena data dikirim tanpa enkripsi.
+- Session hijacking gagal pada SSH karena adanya enkripsi dan autentikasi.
+- IP spoofing berhasil memanipulasi alamat IP sumber dan menyebabkan target meresponse ke alamat palsu atau ke dirinya sendiri.
+- Visualisasi EtherApe menunjukkan peningkatan trafik yang signifikan saat serangan dilakukan.
+
+---
+
+## Penanggulangan (Mitigasi)
+
+- Menggunakan protokol aman seperti SSH.
+- Static ARP dan Dynamic ARP Inspection (DAI).
+- Firewall dan IDS/IPS.
+- Ingress dan egress filtering pada router.
+- TCP SYN cookies untuk mencegah SYN flood.
+
+---
+
+## Kesimpulan
+
+Praktikum ini membuktikan bahwa jaringan tanpa pengamanan yang memadai sangat rentan terhadap serangan spoofing dan hijacking. Penerapan enkripsi, monitoring jaringan, dan mekanisme keamanan yang tepat sangat diperlukan untuk melindungi sistem dari serangan keamanan jaringan.
